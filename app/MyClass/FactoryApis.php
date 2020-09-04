@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 
 /**
  * Class FactoryApis
- * ABASTRAÇÃO DO ENDPOINT... DESSA FORMA, FICA FACIL A SEPARAÇÃO DO BACKEND EM UM SERVIÇO SEPARADO
+ * ABASTRAÇÃO DO ENDPOINT.
+ * Uma vez setado a URL do serviço no app/config.php, basta utilizar os metodos para fazer o consumo de um determinado serviço passando parametros e cabeçalhos.
+ * O consumo e manipulação dos dados são feitos automaticamente e o resultado é retornado, já tratado.
  * @package App\MyClass
  */
 class FactoryApis extends Requests {
