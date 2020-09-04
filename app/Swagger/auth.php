@@ -1,7 +1,7 @@
 <?php
 /**
  * @SWG\Post(
- *   path="auth",
+ *   path="/auth",
  *   summary="Auth",
  *   operationId="Auth",
  *   tags={"Auth"},

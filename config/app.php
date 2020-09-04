@@ -8,7 +8,7 @@ return [
 
     'url_secure' => env('URL_SECURE', 0),
 
-    'url_api_endpoint' => env('URL_API_ENDPOINT', 'http://dashboard.test:8080/api/'),
+    'url_api_endpoint' => env('URL_API_ENDPOINT', 'http://oliveira-trust.test:8080/api/'),
 
     /*
     |--------------------------------------------------------------------------

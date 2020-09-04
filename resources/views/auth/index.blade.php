@@ -135,9 +135,17 @@
         let textHtml = btnScope.html();
         btnScope.html('Processando...').attr('disabled',true);
 
+        let data = {};
+        data.login = $(this)[0].querySelector('#login').value;
+        data.password = $(this)[0].querySelector('#password').value;
+
         $.post({
-            url: "/auth/verify",
-            data: $(this).serialize(),
+            url: "/api/auth",
+            data: JSON.stringify(data),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
             dataType: '',
             success: function (data, jqXHR) {
                 btnScope.html('Abrindo...');

@@ -20,6 +20,7 @@ class MainController extends Controller
 
         $result = $userRepository->auth( $request->get('json')->get('login'), $request->get('json')->get('password') );
         if( !empty( $result ) ){
+            $request->session()->put( 'userData', $result );
             return msgJson( $result );
         }
         return msgErroJson( \Lang::get('auth.failed'), 401 );

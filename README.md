@@ -27,6 +27,8 @@ Execute os seguintes passos abaixo, em um console, após clonar esse repositóri
 Agora, configure o arquivo `config/database.php` e defina o nome da base de dados.
 Lembre-se que o usuário necessitará de acessos *root* para criar as tabelas.
 
+> php artisan config:clear
+
 > php artisan migrate:install
 
 > php artisan migrate

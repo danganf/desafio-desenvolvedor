@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="csrf_token" content="{{ csrf_token() }}">
   <title>{{config('l5-swagger.api.title')}}</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Source+Code+Pro:300,600|Titillium+Web:400,600,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ l5_swagger_asset('swagger-ui.css') }}" >
@@ -77,7 +78,7 @@ window.onload = function() {
 
     url: "{!! $urlToDocs !!}",
     operationsSorter: {!! isset($operationsSorter) ? '"' . $operationsSorter . '"' : 'null' !!},
-    configUrl: {!! isset($configUrl) ? '"' . $configUrl . '"' : 'null' !!},
+    configUrl: {!! isset($additionalConfigUrl) ? '"' . $additionalConfigUrl . '"' : 'null' !!},
     validatorUrl: {!! isset($validatorUrl) ? '"' . $validatorUrl . '"' : 'null' !!},
     oauth2RedirectUrl: "{{ route('l5-swagger.oauth2_callback') }}",
 

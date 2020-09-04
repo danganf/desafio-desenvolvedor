@@ -98,7 +98,7 @@ return [
         |--------------------------------------------------------------------------
         */
 
-        'base' => env('L5_SWAGGER_BASE_PATH', '/api//'),
+        'base' => env('L5_SWAGGER_BASE_PATH', '/api'),
 
         /*
         |--------------------------------------------------------------------------
@@ -232,6 +232,6 @@ return [
     |--------------------------------------------------------------------------
      */
     'constants' => [
-        'L5_SWAGGER_CONST_HOST' => env('L5_SWAGGER_CONST_HOST', 'http://my-default-host.com'),
+        'L5_SWAGGER_CONST_HOST' => 'http://oliveira-trust.test:8080',
     ],
 ];
