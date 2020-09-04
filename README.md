@@ -59,6 +59,14 @@ Agora vá ao navegador e acesso o sistema, utilizando as seguintes credências d
 
 > **password** admin123
 
+## ATENÇÃO!
+NÃO UTILIZE PARA O TESTE o `php artisan serve`, pois como o backend e frontend estão no mesmo repositório,
+mesmo estando isolados para uma futura separação em microserviço, o curl "se perde" nas requisições e dá timeout. 
+
+Recomendo criar um DNS próprio para teste ou utilize o laragon para essa finalidade.
+
+Site: https://laragon.org/
+
 ## Documentação das APIS
 
 O sistema foi construindo separando front-end e back-end, mesmo que ambos esteja
